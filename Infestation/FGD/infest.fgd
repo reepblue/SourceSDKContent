@@ -1,0 +1,54 @@
+//====== Copyright © 1996-2005, Valve Corporation, All rights reserved. =======
+//
+// Purpose: BedBugs game definition file (.fgd) 
+//
+//=============================================================================
+
+@include "infest_base.fgd"
+@include "infest_halflife2.fgd"
+
+@PointClass base(Targetname, Angles, EnableDisable) iconsprite("editor/Director.vmt") = Director
+[
+	StartDisabled(choices) : "Start Disabled" : 1 =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	spawnflags(Flags) = 
+	[
+		16 : "Don't preload template models" : 0
+	]
+
+	MaxNPCCount(integer) : "Num. of NPCs" : 1 : "Number of NPCs alive at a single time."
+	SpawnFrequency(string) : "Frequency" : "0" : "How often (in seconds) a new NPC will be spawned. If set to -1, a new NPC will be made when the last NPC dies."
+	
+	// Outputs
+	output OnAllSpawned(void) : "Fired when the spawned is exhausted (all children have been spawned)."
+	output OnAllLiveChildrenDead(void) : "Fired when all spawned children have died. This does not mean the spawned is exhausted, so a new child may be spawned any time after this (unless the maker is disabled)."
+
+	// Inputs
+	input Toggle(void) : "Toggles the spawner enabled/disabled state."
+	input Enable(void) : "Enables the spawner."
+	input Disable(void) : "Disables the spawner."
+	input AddMaxChildren(integer) : "Adds to the number of NPCs that can spawn before the spawner is exhausted. If an exhausted spawner is given some children to spawn, it still wont begin spawning until it is re-enabled with the Enable input."
+	input SetMaxChildren(integer) : "Sets the number of NPCs that can spawn before the spawner is exhausted. If an exhausted spawner is given some children to spawn, it still won't begin spawning until it is re-enabled with the Enable input."
+	input SetSpawnFrequency(float) : "Sets how often (in seconds) a new NPC will be spawned."
+]
+
+@PointClass base(Weapon) studio("models/weapons/w_crowbar.mdl") = weapon_crowbar : "Crowbar" []
+@PointClass base(Weapon) studio("models/weapons/w_stunbaton.mdl") = weapon_stunstick : "StunStick" []
+@PointClass base(Weapon) studio("models/weapons/w_pistol.mdl") = weapon_pistol : "Pistol" []
+@PointClass base(Weapon) studio("models/weapons/w_irifle.mdl") = weapon_ar2 : "Assault Rifle 2" []
+@PointClass base(Weapon) studio("models/weapons/w_rocket_launcher.mdl") = weapon_rpg : "Missile Launcher" []
+@PointClass base(Weapon) studio("models/weapons/w_rocket_launcher.mdl") = weapon_flack : "Frag launcher" []
+@PointClass base(Weapon) studio("models/weapons/w_smg1.mdl") = weapon_smg1 : "SMG1" []
+@PointClass base(Weapon) studio("models/weapons/w_357.mdl") = weapon_357 : "357" []
+@PointClass base(Weapon) studio("models/weapons/w_crossbow.mdl") = weapon_crossbow : "Crossbow" []
+@PointClass base(Weapon) studio("models/weapons/w_shotgun.mdl") = weapon_shotgun : "Shotgun" []
+@PointClass base(Weapon) studio("models/weapons/w_shotgun.mdl") = weapon_autoshotgun : "Shotgun" []
+@PointClass base(Weapon) studio("models/weapons/w_grenade.mdl") = weapon_frag : "Frag Grenade" []
+@PointClass base(Weapon) studio("models/weapons/w_physics.mdl") = weapon_physcannon : "Physics Cannon" []
+@PointClass base(Weapon) studio("models/spore.mdl") = weapon_bugbait: "Bug bait" []
+@PointClass base(Weapon) studio("models/weapons/W_Alyx_Gun.mdl") = weapon_alyxgun: "Alyx Gun" []
+@PointClass base(Weapon) studio("models/weapons/W_annabelle.mdl") = weapon_annabelle: "Annabelle (Grigori)" []

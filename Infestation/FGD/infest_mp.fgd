@@ -1,0 +1,136 @@
+//====== Copyright © 1996-2005, Valve Corporation, All rights reserved. =======
+//
+// Purpose: BedBugs game definition file (.fgd) 
+//
+//=============================================================================
+
+@include "infest_base.fgd"
+@include "infest_halflife2.fgd"
+
+
+@PointClass base(PlayerClass, Angles) studio("models/editor/playerstart.mdl") = info_player_deathmatch :
+	"This entity indicates the position and facing direction at which the player will spawn during a deathmatch map. Any number of "+
+	"info_player_deathmatch entities may be placed in a map."
+[
+]
+
+
+@PointClass base(PlayerClass, Angles) studio("models/editor/playerstart.mdl") = info_player_combine :
+	"This entity indicates the position and facing direction at which the player will spawn during a deathmatch map. Any number of "+
+	"info_player_deathmatch entities may be placed in a map."
+[
+]
+
+
+@PointClass base(PlayerClass, Angles) studio("models/editor/playerstart.mdl") = info_player_rebel :
+	"This entity indicates the position and facing direction at which the player will spawn during a deathmatch map. Any number of "+
+	"info_player_deathmatch entities may be placed in a map."
+[
+]
+
+@FilterClass base(BaseFilter) size(-8 -8 -8, 8 8 8) = filter_activator_team :
+	"A filter that filters by the team of the activator."
+[
+	filterteam(choices) : "Filter Team Number" : 2 : 
+		"The team number to filter by.  If the filter mode is Allow, only entities whose "+
+		"team number matches the given team will pass the filter. If the filter mode is Disallow, "+
+		"all entities EXCEPT those whose team number matches the given team will pass the filter." =
+	[
+		2 : "Combine"
+		3 : "Rebels"
+	]
+]
+
+@PointClass base(prop_physics) studioprop() sphere(fademindist) sphere(fademaxdist) = prop_physics_respawnable :
+	"This class is the same as prop_physics, except it respawns after it breaks"
+[
+	RespawnTime(float) : "Respawn Time" : 60 : "Ammount in seconds this prop will respawn after it breaks."
+]
+
+@PointClass base(Targetname, Angles, EnableDisable) iconsprite("editor/Director.vmt") = Director
+[
+	StartDisabled(choices) : "Start Disabled" : 1 =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	spawnflags(Flags) = 
+	[
+		16 : "Don't preload template models" : 0
+	]
+
+	MaxNPCCount(integer) : "Num. of NPCs" : 1 : "Number of NPCs alive at a single time."
+	SpawnFrequency(string) : "Frequency" : "0" : "How often (in seconds) a new NPC will be spawned. If set to -1, a new NPC will be made when the last NPC dies."
+	
+	// Outputs
+	output OnAllSpawned(void) : "Fired when the spawned is exhausted (all children have been spawned)."
+	output OnAllLiveChildrenDead(void) : "Fired when all spawned children have died. This does not mean the spawned is exhausted, so a new child may be spawned any time after this (unless the maker is disabled)."
+
+	// Inputs
+	input Toggle(void) : "Toggles the spawner enabled/disabled state."
+	input Enable(void) : "Enables the spawner."
+	input Disable(void) : "Disables the spawner."
+	input AddMaxChildren(integer) : "Adds to the number of NPCs that can spawn before the spawner is exhausted. If an exhausted spawner is given some children to spawn, it still wont begin spawning until it is re-enabled with the Enable input."
+	input SetMaxChildren(integer) : "Sets the number of NPCs that can spawn before the spawner is exhausted. If an exhausted spawner is given some children to spawn, it still won't begin spawning until it is re-enabled with the Enable input."
+	input SetSpawnFrequency(float) : "Sets how often (in seconds) a new NPC will be spawned."
+]
+
+@SolidClass base( Targetname, EnableDisable ) = fog_volume : "An entity to control the fog in the map."
+[
+	FogName(target_destination) : "Fog Name" : : "The name of the fog entity associated with this volume."
+	PostProcessName(target_destination) : "Postprocess Name" : : "The name of the postprocess entity associated with this volume."
+	ColorCorrectionName(target_destination) : "ColorCorrection Name" : : "The name of the color_correction entity associated with this volume."
+]
+
+
+@PointClass base(Angles) iconsprite("editor/env_particles.vmt") = env_detail_controller : "Overrides the min and max fade distances for details sprites in the map."
+[
+	fademindist(integer) : "Start Fade Dist/Pixels" : 512 : "The distance at which the detail props will start fading away."
+	fademaxdist(integer) : "End Fade Dist/Pixels" : 1024 : "The distance at which the detail props will stop fading and stop drawing entirely."
+]
+
+@PointClass base(Targetname, Parentname, RenderFields, Angles) studio("models/editor/cone_helper.mdl") = beam_spotlight : 
+	"An entity to draw a spotlight. Will draw a beam when the player views it side on, and a halo when it's facing towards the player. "+
+	"Unless the 'No Dynamic Light' spawnflag is checked, it will also create a dynamic light wherever the end of the spotlight rests." +
+	"This spotlight is entirely client side, it is not sync'd across clients."
+[
+	spawnflags(Flags) = 
+	[
+		1 : "Start On" : 1
+		2 : "No Dynamic Light" : 0
+		4 : "Start rotation on" : 0
+		8 : "Reverse Direction" : 0
+		16 : "X Axis"  : 0
+		32 : "Y Axis"  : 0
+	]
+
+	HaloSprite(sprite) : "Halo Sprite" : "sprites/light_glow03.vmt" : "The material that should be used for the halo"
+	BeamSprite(sprite) : "Beam Sprite" : "sprites/glow_test02.vmt" : "The material that should be used for the beam"
+	
+	maxspeed(integer) : "Max Rotation Speed" : 100 : "The maximum rotation speed of the spotlight, in degrees per second."
+
+	spotlightlength(integer) : "Spotlight Length" : 500 : "Length of the spotlight beam."
+	spotlightwidth(integer) : "Spotlight Width" : 50 : "Width of the spotlight beam."
+	rendercolor(color255) : "Color (R G B)" : "255 255 255"
+	HDRColorScale(float) : "HDR color scale." : "0.7" : "float value to multiply sprite color by when running in HDR mode."
+	
+	// Inputs
+	input LightOn(void) : "Turn the spotlight on."
+	input LightOff(void) : "Turn the spotlight off"
+	input Start(void) : "Start the rotator rotating."
+	input Stop(void) : "Stop the rotator from rotating."
+	input Reverse(void) : "Reverse the direction of rotation of the rotator."
+	
+	// outputs
+	output OnLightOn(void) : "Fires when light turns on."
+	output OnLightOff(void) : "Fires when light turns off."
+]
+
+@PointClass base(Item) studio("models/props_unique/spawn_apartment/coffeeammo.mdl") = item_ammo_all : "Pile of ammo" []
+@PointClass base(Item) studio("models/props_unique/spawn_apartment/powerammo.mdl") = item_ammo_power : "Pile of ammo" []
+@PointClass base(Weapon) studio("models/weapons/w_bar.mdl") = weapon_bar : "Bar" []
+@PointClass base(Weapon) studio("models/weapons/w_thompson.mdl") = weapon_thompson : "Thompson" []
+@PointClass base(Weapon) studio("models/weapons/w_colt.mdl") = weapon_colt : "Colt" []
+@PointClass base(Weapon) studio("models/weapons/w_m1carb.mdl") = weapon_carbine : "Carbine" []
+
