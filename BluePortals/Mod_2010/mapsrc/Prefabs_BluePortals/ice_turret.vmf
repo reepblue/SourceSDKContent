@@ -1,0 +1,393 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "5004"
+	"mapversion" "12"
+	"formatversion" "100"
+	"prefab" "1"
+}
+viewsettings
+{
+	"bSnapToGrid" "1"
+	"bShowGrid" "1"
+	"bShowLogicalGrid" "0"
+	"nGridSpacing" "8"
+	"bShow3DGrid" "0"
+}
+world
+{
+	"id" "372"
+	"mapversion" "12"
+	"classname" "worldspawn"
+	"detailmaterial" "detail/detailsprites"
+	"detailvbsp" "detail.vbsp"
+	"maxpropscreenwidth" "-1"
+	"skyname" "sky_day01_01"
+}
+entity
+{
+	"id" "373"
+	"classname" "npc_portal_turret_floor"
+	"angles" "0 0 0"
+	"DamageForce" "1"
+	"targetname" "instance_turret_&i"
+	connections
+	{
+		"OnTipped" "instance_turret_trigger_&i,Kill,,0,-1"
+		"OnRetire" "bp_turret_frozen_relay,Trigger,,0.02,-1"
+	}
+	"origin" "0 0 -31.942"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "375"
+	"classname" "trigger_multiple"
+	"filtername" "filter_bp10_room3_icebox"
+	"origin" "0 0 2"
+	"parentname" "instance_turret_&i"
+	"spawnflags" "8"
+	"StartDisabled" "0"
+	"targetname" "instance_turret_trigger_&i"
+	"wait" "1"
+	connections
+	{
+		"OnStartTouch" "bp_turret_icesound_&i,PlaySound,,1,-1"
+		"OnStartTouch" "instance_turret_&i,Skin,3,1,-1"
+		"OnStartTouch" "instance_turret_&i,Disable,,0.45,-1"
+		"OnStartTouch" "instance_turret_frost_&i,TurnOn,,0,-1"
+		"OnEndTouch" "instance_turret_&i,Enable,,4,-1"
+		"OnEndTouch" "instance_turret_&i,Skin,0,4,-1"
+		"OnEndTouch" "instance_turret_frost_&i,TurnOff,,3.45,-1"
+		"OnStartTouch" "bp_turret_frozen_relay,Enable,,0,-1"
+	}
+	solid
+	{
+		"id" "376"
+		side
+		{
+			"id" "1"
+			"plane" "(-48 -48 36) (-48 48 36) (48 48 36)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2"
+			"plane" "(-48 48 -32) (-48 -48 -32) (48 -48 -32)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "3"
+			"plane" "(-48 -48 -32) (-48 48 -32) (-48 48 35.9994)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 -63.7682] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "4"
+			"plane" "(48 48 -32) (48 -48 -32) (48 -48 35.9994)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 -63.7682] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "5"
+			"plane" "(-48 48 -32) (48 48 -32) (48 48 35.9994)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 -63.7682] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "6"
+			"plane" "(48 -48 -32) (-48 -48 -32) (-48 -48 35.9994)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 -63.7682] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "378"
+	"classname" "env_smokestack"
+	"angles" "0 0 0"
+	"BaseSpread" "20"
+	"endsize" "25"
+	"InitialState" "0"
+	"JetLength" "180"
+	"parentname" "instance_turret_&i"
+	"Rate" "10"
+	"renderamt" "32"
+	"rendercolor" "255 255 255"
+	"roll" "0"
+	"SmokeMaterial" "particle/SmokeStack.vmt"
+	"Speed" "20"
+	"SpreadSpeed" "10"
+	"startsize" "15"
+	"targetname" "instance_turret_frost_&i"
+	"twist" "0"
+	"WindAngle" "0"
+	"WindSpeed" "0"
+	"origin" "0 0 -15.942"
+	editor
+	{
+		"color" "255 255 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "382"
+	"classname" "point_clientcommand"
+	"targetname" "console"
+	"origin" "40 -24 -23.942"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "384"
+	"classname" "ambient_generic"
+	"health" "10"
+	"message" "npc/turret_floor/cold--glad_im_not_a_brass_monkey.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "instance_turret_&i"
+	"spawnflags" "48"
+	"targetname" "bp_turret_icesoundb_&i"
+	"origin" "24 24 -23.942"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "387"
+	"classname" "ambient_generic"
+	"health" "10"
+	"message" "npc/turret_floor/melt--whew_thats_much_better.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "instance_turret_&i"
+	"spawnflags" "48"
+	"targetname" "bp_turret_icesound_after3_&i"
+	"origin" "8 24 -23.942"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "390"
+	"classname" "ambient_generic"
+	"health" "10"
+	"message" "npc/turret_floor/achoo_i_think_im_sick.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "instance_turret_&i"
+	"spawnflags" "48"
+	"targetname" "bp_turret_icesound_after1_&i"
+	"origin" "8 40 -23.942"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "393"
+	"classname" "ambient_generic"
+	"health" "10"
+	"message" "npc/turret_floor/cold--i_need_a_sweater.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "instance_turret_&i"
+	"spawnflags" "48"
+	"targetname" "bp_turret_icesounda_&i"
+	"origin" "24 40 -23.942"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "396"
+	"classname" "ambient_generic"
+	"health" "10"
+	"message" "ambient/materials/footsteps_glass2.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "instance_turret_&i"
+	"spawnflags" "48"
+	"targetname" "bp_turret_icesound_&i"
+	"origin" "40 40 -23.942"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "399"
+	"classname" "ambient_generic"
+	"health" "10"
+	"message" "npc/turret_floor/brr_its_cold_isnt_it.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "instance_turret_&i"
+	"spawnflags" "48"
+	"targetname" "bp_turret_icesoundc_&i"
+	"origin" "40 24 -23.942"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "417"
+	"classname" "logic_case"
+	"Case01" "a"
+	"Case02" "b"
+	"Case03" "c"
+	"Case04" "d"
+	"Case05" "e"
+	"Case06" "f"
+	"targetname" "bp_turret_icesoundafterpicker_&i"
+	connections
+	{
+		"OnCase01" "bp_turret_icesound_after1_&i,PlaySound,,0,-1"
+		"OnCase02" "bp_turret_icesound_after2_&i,PlaySound,,0,-1"
+		"OnCase03" "bp_turret_icesound_after3_&i,PlaySound,,0,-1"
+		"OnCase04" "bp_turret_icesoundc_&i,PlaySound,,0,-1"
+		"OnCase05" "bp_turret_icesoundb_&i,PlaySound,,0,-1"
+		"OnCase06" "bp_turret_icesounda_&i,PlaySound,,0,-1"
+	}
+	"origin" "40 -40 -22.942"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 6000]"
+	}
+}
+entity
+{
+	"id" "512"
+	"classname" "ambient_generic"
+	"health" "10"
+	"message" "npc/turret_floor/melt--dont_like_being_cold.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "instance_turret_&i"
+	"spawnflags" "48"
+	"targetname" "bp_turret_icesound_after2_&i"
+	"origin" "-8 40 -23.942"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 5500]"
+	}
+}
+entity
+{
+	"id" "716"
+	"classname" "logic_relay"
+	"StartDisabled" "1"
+	"targetname" "bp_turret_frozen_relay"
+	connections
+	{
+		"OnTrigger" "instance_turret_&i,Skin,4,1,-1"
+	}
+	"origin" "-8 24 -24"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}

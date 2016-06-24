@@ -1,0 +1,116 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "4715"
+	"mapversion" "1"
+	"formatversion" "100"
+	"prefab" "0"
+}
+visgroups
+{
+}
+viewsettings
+{
+	"bSnapToGrid" "1"
+	"bShowGrid" "1"
+	"bShowLogicalGrid" "0"
+	"nGridSpacing" "32"
+	"bShow3DGrid" "0"
+}
+world
+{
+	"id" "1"
+	"mapversion" "1"
+	"classname" "worldspawn"
+	"skyname" "sky_day01_01"
+	"maxpropscreenwidth" "-1"
+	"detailvbsp" "detail.vbsp"
+	"detailmaterial" "detail/detailsprites"
+}
+entity
+{
+	"id" "2"
+	"classname" "point_proximity_sensor"
+	"angles" "0 0 0"
+	"target" "distance_target"
+	"targetname" "detector_locate_portal_&i"
+	connections
+	{
+		"Distance" "detector_evaluate,SetValueCompare,,0,1"
+		"Distance" "!self,Kill,,0,1"
+	}
+	"origin" "32 -16 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -5268]"
+	}
+}
+entity
+{
+	"id" "4"
+	"classname" "point_template"
+	"spawnflags" "2"
+	"targetname" "detector_template_&i"
+	"Template01" "detector_locate_portal_&i"
+	"origin" "32 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -5768]"
+	}
+}
+entity
+{
+	"id" "6"
+	"classname" "env_entity_maker"
+	"angles" "0 0 0"
+	"EntityTemplate" "detector_template_&i"
+	"PostSpawnDirection" "0 0 0"
+	"PostSpawnDirectionVariance" "0.15"
+	"targetname" "detector_entityMaker_&i"
+	"origin" "0 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -4768]"
+	}
+}
+entity
+{
+	"id" "8"
+	"classname" "logic_compare"
+	"CompareValue" "48"
+	"targetname" "detector_evaluate_&i"
+	connections
+	{
+		"OnLessThan" "door_left,Open,,0,-1"
+		"OnGreaterThan" "door_left,Close,,0,-1"
+		"OnGreaterThan" "door_right,Close,,0,-1"
+		"OnLessThan" "door_right,Open,,0,-1"
+	}
+	"origin" "-32 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 -4268]"
+	}
+}
+cameras
+{
+	"activecamera" "-1"
+}
+cordon
+{
+	"mins" "(-1024 -1024 -1024)"
+	"maxs" "(1024 1024 1024)"
+	"active" "0"
+}
