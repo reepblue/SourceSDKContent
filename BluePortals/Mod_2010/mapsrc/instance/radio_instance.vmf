@@ -1,0 +1,482 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "5004"
+	"mapversion" "9"
+	"formatversion" "100"
+	"prefab" "0"
+}
+visgroups
+{
+}
+viewsettings
+{
+	"bSnapToGrid" "1"
+	"bShowGrid" "1"
+	"bShowLogicalGrid" "0"
+	"nGridSpacing" "8"
+	"bShow3DGrid" "0"
+}
+world
+{
+	"id" "1"
+	"mapversion" "9"
+	"classname" "worldspawn"
+	"detailmaterial" "detail/detailsprites"
+	"detailvbsp" "detail.vbsp"
+	"maxpropscreenwidth" "-1"
+	"skyname" "sky_day01_01"
+}
+entity
+{
+	"id" "2"
+	"classname" "prop_physics_override"
+	"angles" "0 0 0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"health" "0"
+	"inertiaScale" "1.0"
+	"model" "models/props/radio_reference.mdl"
+	"physdamagescale" "0.1"
+	"skin" "0"
+	"spawnflags" "256"
+	"targetname" "bp_radiosystem_radiomodel_&i"
+	connections
+	{
+		"OnPlayerPickup" "bp_radiosystem_songcase_&i,PickRandomShuffle,,0,1"
+		"OnPlayerPickup" "bp_radiosystem_warningtriggercase_&i,PickRandomShuffle,,0,1"
+		"OnOutOfWorld" "bp_radiosystem_all_stopalll_&i,Trigger,,0,-1"
+		"OnTakeDamage" "bp_radiosystem_all_stopalll_&i,Trigger,,0,-1"
+		"OnHealthChanged" "bp_radiosystem_all_stopalll_&i,Trigger,,0,-1"
+	}
+	"origin" "-40 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6"
+	"classname" "logic_case"
+	"Case01" "1"
+	"Case02" "2"
+	"Case03" "3"
+	"Case04" "4"
+	"Case05" "5"
+	"Case06" "6"
+	"Case07" "7"
+	"Case08" "8"
+	"Case09" "9"
+	"Case10" "10"
+	"Case11" "11"
+	"targetname" "bp_radiosystem_songcase_&i"
+	connections
+	{
+		"OnCase01" "bp_radiosystem_radiomusic_a_&i,PlaySound,,0,-1"
+		"OnCase02" "bp_radiosystem_radiomusic_b_&i,PlaySound,,0,-1"
+		"OnCase03" "bp_radiosystem_radiomusic_c_&i,PlaySound,,0,-1"
+		"OnCase04" "bp_radiosystem_radiomusic_d_&i,PlaySound,,0,-1"
+		"OnCase05" "bp_radiosystem_radiomusic_e_&i,PlaySound,,0,-1"
+		"OnCase06" "bp_radiosystem_radiomusic_f_&i,PlaySound,,0,-1"
+		"OnCase07" "bp_radiosystem_radiomusic_g_&i,PlaySound,,0,-1"
+		"OnCase08" "bp_radiosystem_radiomusic_h_&i,PlaySound,,0,-1"
+		"OnCase09" "bp_radiosystem_radiomusic_i_&i,PlaySound,,0,-1"
+		"OnCase10" "bp_radiosystem_radiomusic_j_&i,PlaySound,,0,-1"
+	}
+	"origin" "-24 32 32"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "8"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"targetname" "bp_radiosystem_music_stopalll_&i"
+	connections
+	{
+		"OnTrigger" "bp_radiosystem_radiomusic_a_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_a_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_b_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_b_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_c_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_c_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_d_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_d_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_e_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_e_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_f_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_f_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_g_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_g_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_h_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_h_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_i_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_i_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_j_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_j_&i,Volume,0,0,-1"
+	}
+	"origin" "-24 32 16"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "10"
+	"classname" "ambient_generic"
+	"health" "5"
+	"message" "radio/radio_fz.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "bp_radiosystem_radiomodel_&i"
+	"spawnflags" "48"
+	"targetname" "bp_radiosystem_radiomusic_b_&i"
+	"origin" "8 32 16"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "13"
+	"classname" "ambient_generic"
+	"health" "5"
+	"message" "radio/radio_teto_turn_forever.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "bp_radiosystem_radiomodel_&i"
+	"spawnflags" "48"
+	"targetname" "bp_radiosystem_radiomusic_a_&i"
+	"origin" "-8 32 16"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "16"
+	"classname" "ambient_generic"
+	"health" "5"
+	"message" "radio/radio_lucky.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "bp_radiosystem_radiomodel_&i"
+	"spawnflags" "48"
+	"targetname" "bp_radiosystem_radiomusic_c_&i"
+	"origin" "24 32 16"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "22"
+	"classname" "ambient_generic"
+	"health" "10"
+	"message" "radio/radio_warning001s.wav"
+	"pitch" "101"
+	"pitchstart" "101"
+	"radius" "1250"
+	"SourceEntityName" "bp_radiosystem_radiomodel_&i"
+	"spawnflags" "48"
+	"targetname" "bp_radiosystem_radiowarning_a_&i"
+	"origin" "8 48 16"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "25"
+	"classname" "logic_timer"
+	"LowerRandomBound" "10"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "bp_radiosystem_warningtimer_&i"
+	"UpperRandomBound" "30"
+	"UseRandomTime" "1"
+	connections
+	{
+		"OnTimer" "bp_radiosystem_warningcase_&i,PickRandom,,0,-1"
+	}
+	"origin" "-8 48 16"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "27"
+	"classname" "logic_case"
+	"Case01" "Alert?"
+	"Case02" "Keep The Music!"
+	"targetname" "bp_radiosystem_warningtriggercase_&i"
+	connections
+	{
+		"OnCase01" "bp_radiosystem_warningtimer_&i,Enable,,0,-1"
+		"OnCase02" "bp_radiosystem_warningtimer_&i,Disable,,0,-1"
+	}
+	"origin" "-24 48 16"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "29"
+	"classname" "logic_case"
+	"Case01" "1"
+	"targetname" "bp_radiosystem_warningcase_&i"
+	connections
+	{
+		"OnCase01" "bp_radiosystem_radiowarning_a_&i,PlaySound,,0.1,-1"
+		"OnCase01" "bp_radiosystem_music_stopalll_&i,Trigger,,0,-1"
+		"OnCase01" "bp_radiosystem_warningtimer_&i,Disable,,0,-1"
+	}
+	"origin" "-24 48 32"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "31"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"targetname" "bp_radiosystem_all_stopalll_&i"
+	connections
+	{
+		"OnTrigger" "bp_radiosystem_radiomusic_a_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_a_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_b_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_b_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_c_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_c_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiowarning_a_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiowarning_a_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_j_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_j_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_i_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_i_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_h_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_h_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_g_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_g_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_f_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_f_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_e_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_e_&i,StopSound,,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_d_&i,Volume,0,0,-1"
+		"OnTrigger" "bp_radiosystem_radiomusic_d_&i,StopSound,,0,-1"
+	}
+	"origin" "-24 16 16"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1500]"
+	}
+}
+entity
+{
+	"id" "97"
+	"classname" "ambient_generic"
+	"health" "5"
+	"message" "radio/radio_baboushka.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "bp_radiosystem_radiomodel_&i"
+	"spawnflags" "48"
+	"targetname" "bp_radiosystem_radiomusic_d_&i"
+	"origin" "40 32 16"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "232"
+	"classname" "ambient_generic"
+	"health" "5"
+	"message" "radio/radio_big_show1.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "bp_radiosystem_radiomodel_&i"
+	"spawnflags" "48"
+	"targetname" "bp_radiosystem_radiomusic_e_&i"
+	"origin" "-24 48 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "258"
+	"classname" "ambient_generic"
+	"health" "5"
+	"message" "radio/radio_forever.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "bp_radiosystem_radiomodel_&i"
+	"spawnflags" "48"
+	"targetname" "bp_radiosystem_radiomusic_f_&i"
+	"origin" "-24 32 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "274"
+	"classname" "ambient_generic"
+	"health" "5"
+	"message" "radio/radio_hb173.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "bp_radiosystem_radiomodel_&i"
+	"spawnflags" "48"
+	"targetname" "bp_radiosystem_radiomusic_g_&i"
+	"origin" "-8 32 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "283"
+	"classname" "ambient_generic"
+	"health" "5"
+	"message" "radio/radio_nu.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "bp_radiosystem_radiomodel_&i"
+	"spawnflags" "48"
+	"targetname" "bp_radiosystem_radiomusic_h_&i"
+	"origin" "8 32 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "292"
+	"classname" "ambient_generic"
+	"health" "5"
+	"message" "radio/radio_chemicalbomb.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "bp_radiosystem_radiomodel_&i"
+	"spawnflags" "48"
+	"targetname" "bp_radiosystem_radiomusic_i_&i"
+	"origin" "24 32 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "307"
+	"classname" "ambient_generic"
+	"health" "5"
+	"message" "radio/radio_umbrella.wav"
+	"pitch" "100"
+	"pitchstart" "100"
+	"radius" "1250"
+	"SourceEntityName" "bp_radiosystem_radiomodel_&i"
+	"spawnflags" "48"
+	"targetname" "bp_radiosystem_radiomusic_j_&i"
+	"origin" "40 32 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+cameras
+{
+	"activecamera" "-1"
+}
+cordon
+{
+	"mins" "(-1024 -1024 -1024)"
+	"maxs" "(1024 1024 1024)"
+	"active" "0"
+}
