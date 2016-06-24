@@ -1,0 +1,22 @@
+$staticprop
+$modelname "props_gameplay/laser_emitter"
+$scale "1.000000"
+$body "Body" "laser_emitter_ref"
+$cdmaterials "models/props_gameplay"
+$sequence idle "laser_emitter_ref"
+$surfaceprop "metal"
+$collisionmodel "laser_emitter_phys"  {
+	$concave
+	$maxconvexpieces 4
+	$automass
+}
+$attachment "laser_start" "" 0.000000 15.000000 -6.110000 absolute rigid rotate 0.000000 270.000000 0.000000
+$attachment "beam2_1" "" -30.000000 15.000000 -6.110000 absolute rigid rotate 0.000000 0.000000 0.000000
+$attachment "beam2_2" "" 30.000000 15.000000 -6.110000 absolute rigid rotate 0.000000 180.000000 0.000000
+$attachment "beam1_2" "" 0.000000 15.000000 -30.000000 absolute rigid rotate -90.000000 0.000000 0.000000
+$attachment "beam1_1" "" 0.000000 15.000000 30.000000 absolute rigid rotate 90.000000 0.000000 0.000000
+$attachment "laser_start" "" 72.000000 15.000000 -10.110000 absolute rigid rotate 0.000000 270.000000 0.000000
+$attachment "beam2_1" "" 42.000000 15.000000 -10.110000 absolute rigid rotate 0.000000 0.000000 0.000000
+$attachment "beam2_2" "" 102.000000 15.000000 -10.110000 absolute rigid rotate 0.000000 180.000000 0.000000
+$attachment "beam1_2" "" 72.000000 15.000000 -30.000000 absolute rigid rotate -90.000000 0.000000 0.000000
+$attachment "beam1_1" "" 72.000000 15.000000 30.000000 absolute rigid rotate 90.000000 0.000000 0.000000
