@@ -1,0 +1,374 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "6157"
+	"mapversion" "11"
+	"formatversion" "100"
+	"prefab" "0"
+}
+visgroups
+{
+}
+viewsettings
+{
+	"bSnapToGrid" "1"
+	"bShowGrid" "1"
+	"bShowLogicalGrid" "0"
+	"nGridSpacing" "8"
+	"bShow3DGrid" "0"
+}
+world
+{
+	"id" "1"
+	"mapversion" "11"
+	"classname" "worldspawn"
+	"detailmaterial" "detail/detailsprites"
+	"detailvbsp" "detail.vbsp"
+	"maxpropscreenwidth" "-1"
+	"skyname" "sky_day01_01"
+}
+entity
+{
+	"id" "2"
+	"classname" "infest_swarm_maker"
+	"angles" "0 0 0"
+	"createspores" "0"
+	"fighttarget" "!player"
+	"ignorebugbait" "1"
+	"MaxLiveChildren" "25"
+	"MaxNPCCount" "1"
+	"pool_max" "200"
+	"pool_regen_amount" "5"
+	"pool_regen_time" "5"
+	"pool_start" "10"
+	"spawnflags" "0"
+	"SpawnFrequency" "5"
+	"spawngroup" "infestation"
+	"spawnradius" "12000"
+	"StartDisabled" "1"
+	"targetname" "infestation_template"
+	"TemplateName" "@antlion"
+	"vehicledistance" "1"
+	"workerspawnrate" "0"
+	"origin" "0 0 24"
+	editor
+	{
+		"color" "0 0 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 -15768]"
+	}
+}
+entity
+{
+	"id" "4"
+	"classname" "npc_antlion"
+	"angles" "0 0 0"
+	"disableshadows" "1"
+	"eludedist" "1024"
+	"ignorebugbait" "No"
+	"physdamagescale" "1.0"
+	"radius" "256"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"spawnflags" "2820"
+	"squadname" "infestation"
+	"startburrowed" "1"
+	"targetname" "@antlion"
+	"unburroweffects" "No"
+	connections
+	{
+		"OnDamagedByPlayer" "game_score,ApplyScore,,0,-1"
+		"OnDeath" "game_count_killed,Add,1,0,-1"
+		"OnDeath" "game_score_kill,ApplyScore,,0,-1"
+	}
+	"origin" "0 0 -24"
+	editor
+	{
+		"color" "0 200 200"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[4000 -16268]"
+	}
+}
+entity
+{
+	"id" "6"
+	"classname" "math_counter"
+	"max" "25"
+	"targetname" "game_count_killed"
+	connections
+	{
+		"OnHitMax" "infestation_template,SetSpawnFrequency,4,0,-1"
+		"OnHitMax" "infestation_template,AddToPool,10,0,-1"
+		"OnHitMax" "infestation_template,SetPoolRegenAmount,10,0,-1"
+	}
+	"origin" "-48 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 6000]"
+	}
+}
+entity
+{
+	"id" "8"
+	"classname" "math_counter"
+	"max" "50"
+	"targetname" "game_count_killed"
+	connections
+	{
+		"OnHitMax" "infestation_template,AddToPool,10,0,-1"
+		"OnHitMax" "infestation_template,SetPoolRegenAmount,15,0,-1"
+	}
+	"origin" "-32 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 6000]"
+	}
+}
+entity
+{
+	"id" "10"
+	"classname" "math_counter"
+	"max" "75"
+	"targetname" "game_count_killed"
+	connections
+	{
+		"OnHitMax" "infestation_template,SetPoolRegenAmount,20,0,-1"
+		"OnHitMax" "infestation_template,AddToPool,10,0,-1"
+	}
+	"origin" "-16 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 6000]"
+	}
+}
+entity
+{
+	"id" "12"
+	"classname" "math_counter"
+	"max" "100"
+	"targetname" "game_count_killed"
+	connections
+	{
+		"OnHitMax" "infestation_template,SetSpawnFrequency,3,0,-1"
+		"OnHitMax" "infestation_template,AddToPool,10,0,-1"
+		"OnHitMax" "infestation_template,SetPoolRegenAmount,25,0,-1"
+		"OnHitMax" "game_powerbuttons,Unlock,,0,-1"
+		"OnHitMax" "game_powerbuttons-unlockedmessage,Display,,0,-1"
+	}
+	"origin" "0 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 6000]"
+	}
+}
+entity
+{
+	"id" "14"
+	"classname" "math_counter"
+	"max" "150"
+	"targetname" "game_count_killed"
+	connections
+	{
+		"OnHitMax" "infestation_template,AddToPool,10,0,-1"
+		"OnHitMax" "infestation_template,SetPoolRegenAmount,25,0,-1"
+	}
+	"origin" "16 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 6000]"
+	}
+}
+entity
+{
+	"id" "16"
+	"classname" "math_counter"
+	"max" "200"
+	"targetname" "game_count_killed"
+	connections
+	{
+		"OnHitMax" "infestation_template,SetSpawnFrequency,2,0,-1"
+		"OnHitMax" "infestation_template,AddToPool,10,0,-1"
+		"OnHitMax" "infestation_template,SetPoolRegenAmount,40,0,-1"
+	}
+	"origin" "32 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 6000]"
+	}
+}
+entity
+{
+	"id" "18"
+	"classname" "math_counter"
+	"max" "250"
+	"targetname" "game_count_killed"
+	connections
+	{
+		"OnHitMax" "infestation_template,SetSpawnFrequency,-1,0,-1"
+		"OnHitMax" "infestation_template,AddToPool,10,0,-1"
+		"OnHitMax" "infestation_template,SetPoolRegenAmount,50,0,-1"
+	}
+	"origin" "48 0 0"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 6000]"
+	}
+}
+entity
+{
+	"id" "98"
+	"classname" "logic_relay"
+	"spawnflags" "0"
+	"targetname" "@start"
+	connections
+	{
+		"OnTrigger" "game_text_warn-infestation,Display,,0,-1"
+		"OnTrigger" "infestation_template,Enable,,4,-1"
+		"OnTrigger" "game_timer,Enable,,0,-1"
+	}
+	"origin" "32 0 -23"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 3000]"
+	}
+}
+entity
+{
+	"id" "100"
+	"classname" "game_score"
+	"points" "50"
+	"spawnflags" "0"
+	"targetname" "game_score_start"
+	"origin" "48 0 -24"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 3500]"
+	}
+}
+entity
+{
+	"id" "102"
+	"classname" "game_text"
+	"channel" "1"
+	"color" "100 100 100"
+	"color2" "240 110 0"
+	"fadein" "0.5"
+	"fadeout" "0.5"
+	"fxtime" "0.25"
+	"holdtime" "5.00"
+	"message" "Here they come...."
+	"spawnflags" "1"
+	"targetname" "game_text_warn-infestation"
+	"x" "-1"
+	"y" "-0.4"
+	"origin" "16 0 -24"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 2500]"
+	}
+}
+entity
+{
+	"id" "115"
+	"classname" "logic_timer"
+	"RefireTime" "$time"
+	"spawnflags" "0"
+	"StartDisabled" "1"
+	"targetname" "game_timer"
+	connections
+	{
+		"OnTimer" "@sun,Start,,0,-1"
+		"OnTimer" "infestation_template,Disable,,0,-1"
+		"OnTimer" "!self,Disable,,0,-1"
+		"OnTimer" "game_text_win,Display,,0,-1"
+	}
+	"origin" "-32 0 -24"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "142"
+	"classname" "func_instance_parms"
+	"parm1" "$time string"
+	"origin" "-48 0 -24"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "179"
+	"classname" "game_text"
+	"channel" "1"
+	"color" "100 100 100"
+	"color2" "240 110 0"
+	"fadein" "0.5"
+	"fadeout" "0.5"
+	"fxtime" "0.25"
+	"holdtime" "5.00"
+	"message" "You Won"
+	"spawnflags" "1"
+	"targetname" "game_text_win"
+	"x" "-1"
+	"y" "-0.4"
+	"origin" "-16 0 -24"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 2500]"
+	}
+}
+cameras
+{
+	"activecamera" "-1"
+}
+cordon
+{
+	"mins" "(-1024 -1024 -1024)"
+	"maxs" "(1024 1024 1024)"
+	"active" "0"
+}

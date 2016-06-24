@@ -1,0 +1,13 @@
+"LightmappedGeneric"
+{
+	// Original shader: BaseTimesLightmap
+	"$translucent" 1
+	"$basetexture" "Tools/toolsnpcclip"
+	"srgb?$basetexture" "Tools/toolsnpcclip-dx10"
+	"%compileclip" 1
+	"$surfaceprop" "default_silent"
+	"%keywords" "tools, sdk,  platform"
+
+	//"$basetexturetransform" "center 1 1 scale 1 1 rotate 45 translate 0 0"
+}
+
