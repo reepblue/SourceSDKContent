@@ -1,0 +1,3 @@
+"startframe" "1"
+"endframe" "2"
+"dxt5" "1"
