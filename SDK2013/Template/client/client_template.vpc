@@ -1,0 +1,103 @@
+//-----------------------------------------------------------------------------
+//	CLIENT_TEMPLATE.VPC
+//
+//	Project Script
+//-----------------------------------------------------------------------------
+
+// STOP! DON'T TOUCH UNLESS YOU KNOW WHAT YOU'RE DOING!
+// EDITING THE VPC AFTER THE SOULTION IS BUILT WILL BREAK COMPILING!
+// YOU'LL BE FORCED TO REBUILD THE SOULTION UPON EDITING!
+
+// If you keep this like this, the dlls will be copied to ROOT\sp\game
+$Macro SRCDIR		"..\.."
+
+// The mod folder's name. 
+$Macro GAMENAME 	"template" 
+
+$Include "$SRCDIR\game\client\client_base.vpc"
+$Include "$SRCDIR\game\protobuf_include.vpc"
+
+$Configuration
+{
+	$Compiler
+	{
+		// Where should we look for .h and other files?
+		$AdditionalIncludeDirectories	".\template;$SRCDIR\game\shared\template;..\..\public;$BASE"
+		
+		// Preprocessors make it so you can toggle certain parts of code through out the soultion.
+		$PreprocessorDefinitions		"$BASE;TEMPLATE_DLL;GLOWS_ENABLE;USES_SAVERESTORE"
+	}
+}
+
+$Project "Client (Template)"
+{
+	$Folder	"Source Files"
+	{
+		-$File	"$SRCDIR\game\shared\weapon_parse_default.cpp"
+	}
+
+	$Folder	"My Mod's Files"
+	{
+		$Folder	"HUD"
+		{
+			$File	"template\hud_damageindicator.cpp"
+			$File	"template\hud_weaponselection.cpp"
+		}
+		
+		$Folder	"Objects"
+		{
+			$File	"template\c_baseglowanimating.cpp"
+			$File	"template\c_baseglowanimating.h"
+		}
+		
+		$Folder	"Player"
+		{
+			$File	"template\c_sdk_player.cpp"
+			$File	"template\c_sdk_player.h"
+		}
+	
+		$Folder	"Shared"
+		{
+			$File	"$SRCDIR\game\shared\template\sdk_gamemovement.cpp"
+			$File	"$SRCDIR\game\shared\template\sdk_gamerules_sp.cpp"
+			$File	"$SRCDIR\game\shared\template\sdk_gamerules_sp.h"
+			$File	"$SRCDIR\game\shared\template\sdk_player_shared.h"
+			$File	"$SRCDIR\game\shared\template\sdk_shareddefs.h"
+			$File	"$SRCDIR\game\shared\template\sdk_usermessages.cpp"
+		}
+		
+		$Folder	"UI"
+		{
+			$File	"template\vgui_rootpanel_sdk.cpp"
+		}
+		
+		$Folder	"Weapons"
+		{
+			$Folder	"Shared"
+			{
+				$File	"$SRCDIR\game\shared\template\basesdkcombatweapon_shared.cpp"
+				$File	"$SRCDIR\game\shared\template\basesdkcombatweapon_shared.h"
+				$File	"$SRCDIR\game\shared\template\sdk_weapon_parse.cpp"
+				$File	"$SRCDIR\game\shared\template\sdk_weapon_parse.h"
+			}
+		
+			$File 	"template\c_basesdkcombatweapon.cpp"
+			$File 	"template\c_basesdkcombatweapon.h"
+			$File 	"template\c_weapon__stubs_sdk.cpp"
+		}	
+	
+		$File	"template\clientmode_sdk.cpp"
+		$File	"template\clientmode_sdk.h"
+		$File	"template\sdk_fx.cpp"
+		$File	"template\sdk_in_main.cpp"
+		$File	"template\sdk_prediction.cpp"	
+	}
+
+	$Folder	"Source Files"
+	{
+		$File	"hud_chat.cpp"
+		$File	"c_team_objectiveresource.cpp"
+		$File	"c_team_objectiveresource.h"
+	}
+	
+}

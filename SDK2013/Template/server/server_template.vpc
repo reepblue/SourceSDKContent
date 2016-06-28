@@ -1,0 +1,112 @@
+//-----------------------------------------------------------------------------
+//	SERVER_TEMPLATE.VPC
+//
+//	Project Script
+//-----------------------------------------------------------------------------
+
+// STOP! DON'T TOUCH UNLESS YOU KNOW WHAT YOU'RE DOING!
+// EDITING THE VPC AFTER THE SOULTION IS BUILT WILL BREAK COMPILING!
+// YOU'LL BE FORCED TO REBUILD THE SOULTION UPON EDITING!
+
+// If you keep this like this, the dlls will be copied to ROOT\sp\game
+$Macro SRCDIR		"..\.."
+
+// The mod folder's name. 
+$Macro GAMENAME 	"template"
+
+$Include "$SRCDIR\game\server\server_base.vpc"
+
+$Configuration
+{
+	$Compiler
+	{
+		// Where should we look for .h and other files?
+		$AdditionalIncludeDirectories	".\template;$SRCDIR\game\shared\template;..\..\public;$BASE"
+		
+		// Preprocessors make it so you can toggle certain parts of code through out the soultion.
+		$PreprocessorDefinitions		"$BASE;TEMPLATE_DLL;GLOWS_ENABLE;USES_SAVERESTORE"
+	}
+}
+
+$Project "Server (Template)"
+{
+	$Folder	"My Mod's Files"
+	{
+		$Folder	"Objects"
+		{
+			$File	"template\baseglowanimating.cpp"
+			$File	"template\baseglowanimating.h"
+		}	
+	
+		$Folder	"Player"
+		{
+			$File	"template\player_pickup_controller.cpp"
+			$File	"template\player_pickup_controller.h"
+			$File	"template\sdk_player.cpp"
+			$File	"template\sdk_player.h"
+			$File	"template\sdk_playermove.cpp"
+		}
+	
+		$Folder	"Shared"
+		{
+			$File	"$SRCDIR\game\shared\template\sdk_gamemovement.cpp"
+			$File	"$SRCDIR\game\shared\template\sdk_gamerules_sp.cpp"
+			$File	"$SRCDIR\game\shared\template\sdk_gamerules_sp.h"
+			$File	"$SRCDIR\game\shared\template\sdk_player_shared.h"
+			$File	"$SRCDIR\game\shared\template\sdk_shareddefs.h"
+			$File	"$SRCDIR\game\shared\template\sdk_usermessages.cpp"
+		}
+		$Folder	"Weapons"
+		{
+			$Folder	"Shared"
+			{
+				$File	"$SRCDIR\game\shared\template\basesdkcombatweapon_shared.cpp"
+				$File	"$SRCDIR\game\shared\template\basesdkcombatweapon_shared.h"
+				$File	"$SRCDIR\game\shared\template\sdk_weapon_parse.cpp"
+				$File	"$SRCDIR\game\shared\template\sdk_weapon_parse.h"
+			}
+			
+			$File 	"template\basesdkcombatweapon.cpp"
+			$File 	"template\basesdkcombatweapon.h"
+			$File 	"template\basebludgeonweapon.cpp"
+			$File 	"template\basebludgeonweapon.h"	
+			
+			// Our Weapons
+			$File	"template\weapon_cubemap.cpp"
+			$File	"template\weapon_sdk_melee.cpp"
+			$File	"template\weapon_sdk_pistol.cpp"
+			$File	"template\weapon_sdk_shotgun.cpp"
+			//$File	"template\weapon_sdk_smg.cpp" //Uncomment me when we fix gravity!
+		}
+		
+		$File	"template\sdk_client.cpp"
+		$File	"template\sdk_eventlog.cpp"
+	}
+	
+	$Folder	"Source Files"
+	{
+		$File	"ai_eventresponse.cpp"
+		$File	"ai_eventresponse.h"
+		$File	"ai_relationship.cpp"
+		$File	"base_gameinterface.cpp"
+		$File	"basegrenade_concussion.cpp"
+		$File	"basegrenade_contact.cpp"
+		$File	"basegrenade_timed.cpp"
+		$File	"grenadethrown.cpp"
+		$File	"grenadethrown.h"
+		$File	"h_cycler.cpp"
+		$File	"h_cycler.h"
+		$File	"logic_achievement.cpp"
+		$File	"monstermaker.cpp"
+		$File	"monstermaker.h"
+		$File	"physics_bone_follower.h"
+		$File	"$SRCDIR\game\shared\ragdoll_shared.h"
+		$File	"$SRCDIR\game\shared\solidsetdefaults.h"
+		$File	"$SRCDIR\game\shared\hl2\survival_gamerules.cpp"
+		$File	"team_spawnpoint.cpp"
+		$File	"team_spawnpoint.h"
+		$File	"$SRCDIR\game\shared\touchlink.h"
+		$File	"vehicle_choreo_generic.cpp"
+		$File	"$SRCDIR\game\shared\vehicle_choreo_generic_shared.h"
+
+}
