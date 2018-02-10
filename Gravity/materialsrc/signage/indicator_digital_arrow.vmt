@@ -1,0 +1,16 @@
+"UnlitGeneric"
+{
+	"$basetexture" "signage/indicator_digital_arrow"
+	"$surfaceprop" "Glass"
+	"%keywords" "gravity"
+//	"$translucent" 1
+  "Proxies" 
+  { 
+   "ToggleTexture"
+   {
+    "toggleTextureVar" "$baseTexture"
+    "toggleTextureFrameNumVar" "$frame"
+    "toggleTextureShouldWrap" "0"
+   } 	
+  } 
+ }

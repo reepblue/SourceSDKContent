@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	// Original shader: BaseTimesLightmapSelfIllum
+	"$basetexture" "lights/light_recessedwarm"
+	"$selfillum" 1
+	"$surfaceprop" "glass"
+	"%keywords" "punt"
+}

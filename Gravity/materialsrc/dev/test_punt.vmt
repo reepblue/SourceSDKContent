@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "dev/reflectivity_30b"
+	"$surfaceprop" "concrete"
+	"%keywords" "gravity"
+	"%punt"
+
+}

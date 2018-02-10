@@ -1,0 +1,608 @@
+
+
+
+materialPath: c:\program files\steam\steamapps\sourcemods\gravity\materials
+Loading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.vmf
+material "reepblue_bp/env_floor_texture001" not found.
+Material not found!: REEPBLUE_BP/ENV_FLOOR_TEXTURE001
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+material "metal/metalgrate018" not found.
+Material not found!: METAL/METALGRATE018
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 100 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (177665 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 730 texinfos to 314
+Reduced 29 texdatas to 23 (747 bytes to 519)
+Writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+8 seconds elapsed
+
+
+
+4 threads
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt
+  98 portalclusters
+ 211 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2 visible clusters (0.00%)
+Total clusters visible: 3796
+Average clusters visible: 38
+Building PAS...
+Average clusters audible: 81
+visdatasize:3288  compressed from 3136
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+0 seconds elapsed
+
+
+
+materialPath: c:\program files\steam\steamapps\sourcemods\gravity\materials
+Loading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.vmf
+material "reepblue_bp/env_floor_texture001" not found.
+Material not found!: REEPBLUE_BP/ENV_FLOOR_TEXTURE001
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+material "metal/metalgrate018" not found.
+Material not found!: METAL/METALGRATE018
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 100 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (177665 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 730 texinfos to 314
+Reduced 29 texdatas to 23 (747 bytes to 519)
+Writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+8 seconds elapsed
+
+
+
+4 threads
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt
+  98 portalclusters
+ 211 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2 visible clusters (0.00%)
+Total clusters visible: 3796
+Average clusters visible: 38
+Building PAS...
+Average clusters audible: 81
+visdatasize:3288  compressed from 3136
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+0 seconds elapsed
+
+
+
+materialPath: c:\program files\steam\steamapps\sourcemods\gravity\materials
+Loading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.vmf
+material "reepblue_bp/env_floor_texture001" not found.
+Material not found!: REEPBLUE_BP/ENV_FLOOR_TEXTURE001
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+material "metal/metalgrate018" not found.
+Material not found!: METAL/METALGRATE018
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 100 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (178217 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 736 texinfos to 320
+Reduced 29 texdatas to 23 (747 bytes to 519)
+Writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+8 seconds elapsed
+
+
+
+4 threads
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt
+  98 portalclusters
+ 211 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2 visible clusters (0.00%)
+Total clusters visible: 3796
+Average clusters visible: 38
+Building PAS...
+Average clusters audible: 81
+visdatasize:3288  compressed from 3136
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+0 seconds elapsed
+
+
+
+materialPath: c:\program files\steam\steamapps\sourcemods\gravity\materials
+Loading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 108 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (187125 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 776 texinfos to 338
+Reduced 27 texdatas to 22 (694 bytes to 486)
+Writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+8 seconds elapsed
+
+
+
+4 threads
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt
+  98 portalclusters
+ 211 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2 visible clusters (0.00%)
+Total clusters visible: 3796
+Average clusters visible: 38
+Building PAS...
+Average clusters audible: 81
+visdatasize:3288  compressed from 3136
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+0 seconds elapsed
+
+
+
+materialPath: c:\program files\steam\steamapps\sourcemods\gravity\materials
+Loading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 108 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (187125 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 776 texinfos to 338
+Reduced 27 texdatas to 22 (694 bytes to 486)
+Writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+8 seconds elapsed
+
+
+
+4 threads
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt
+  98 portalclusters
+ 211 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2 visible clusters (0.00%)
+Total clusters visible: 3796
+Average clusters visible: 38
+Building PAS...
+Average clusters audible: 81
+visdatasize:3288  compressed from 3136
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+0 seconds elapsed
+
+
+
+materialPath: c:\program files\steam\steamapps\sourcemods\gravity\materials
+Loading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...10**** leaked ****
+Entity env_beam (-909.00 1504.00 255.00) leaked!
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 448.0 -160.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 960.0 -160.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 128.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 384.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 544.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 672.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 800.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 848.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+*** Suppressing further FindPortalSide errors.... ***
+Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 108 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (191512 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 788 texinfos to 351
+Reduced 27 texdatas to 22 (694 bytes to 486)
+Writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+8 seconds elapsed
+
+
+
+4 threads
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt
+LoadPortals: couldn't read c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt
+
+
+
+materialPath: c:\program files\steam\steamapps\sourcemods\gravity\materials
+Loading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...10**** leaked ****
+Entity env_beam (-909.00 1504.00 124.00) leaked!
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 448.0 -160.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 960.0 -160.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 128.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 384.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 544.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 672.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 800.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+
+FindPortalSide: Couldn't find a good match for which brush to assign to a portal near (-1024.0 848.0 -8.0)
+Leaf 0 contents: 
+Leaf 1 contents: CONTENTS_SOLID 
+viscontents (node 0 contents ^ node 1 contents): CONTENTS_SOLID 
+This means that none of the brushes in leaf 0 or 1 that touches the portal has CONTENTS_SOLID 
+Check for a huge brush enclosing the coordinates above that has contents CONTENTS_SOLID 
+Candidate brush IDs: 
+
+*** Suppressing further FindPortalSide errors.... ***
+Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 108 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (191512 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 788 texinfos to 351
+Reduced 27 texdatas to 22 (694 bytes to 486)
+Writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+8 seconds elapsed
+
+
+
+4 threads
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt
+LoadPortals: couldn't read c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt
+
+
+
+materialPath: c:\program files\steam\steamapps\sourcemods\gravity\materials
+Loading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 108 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (192744 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 788 texinfos to 344
+Reduced 27 texdatas to 22 (694 bytes to 486)
+Writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+8 seconds elapsed
+
+
+
+4 threads
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt
+  98 portalclusters
+ 211 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2 visible clusters (0.00%)
+Total clusters visible: 3796
+Average clusters visible: 38
+Building PAS...
+Average clusters audible: 81
+visdatasize:3288  compressed from 3136
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+0 seconds elapsed
+
+
+
+materialPath: c:\program files\steam\steamapps\sourcemods\gravity\materials
+Loading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.vmf
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 108 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (193529 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 796 texinfos to 352
+Reduced 30 texdatas to 25 (780 bytes to 572)
+Writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+8 seconds elapsed
+
+
+
+4 threads
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+reading c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.prt
+  98 portalclusters
+ 211 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2 visible clusters (0.00%)
+Total clusters visible: 3796
+Average clusters visible: 38
+Building PAS...
+Average clusters audible: 81
+visdatasize:3288  compressed from 3136
+writing c:\program files\steam\steamapps\reepblue\sourcesdk_content\gravity\mapsrc\grav_testchamber_00-01.bsp
+0 seconds elapsed

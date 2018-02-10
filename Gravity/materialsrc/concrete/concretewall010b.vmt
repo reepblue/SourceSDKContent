@@ -1,0 +1,31 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Concrete/concretewall010b"
+	"$surfaceprop" "concrete"
+	"%keywords" "gravity"
+
+
+	"LightmappedGeneric_HDR_DX9"
+	{
+		"$bumpmap" "concrete/concretewall010_height-ssbump"
+		"$ssbump" "1"
+	}
+
+	"LightmappedGeneric_DX9"
+	{
+		"$bumpmap" "concrete/concretewall010_height-ssbump"
+		"$ssbump" "1"
+	}
+
+	"LightmappedGeneric_DX8"
+	{
+		"$bumpmap" "concrete/concretewall010_normal"
+		"$nodiffusebumplighting" 1
+	}
+
+	"LightmappedGeneric_NoBump_DX8"
+	{
+		"$basetexture" "Concrete/concretewall010b"
+		"$basealphaenvmapmask" 1
+	}
+}

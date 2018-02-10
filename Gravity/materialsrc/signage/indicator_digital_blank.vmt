@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "signage/indicator_digital_blank"
+	"$surfaceprop" "Glass"
+	"%keywords" "gravity"
+//	"$translucent" 1
+}

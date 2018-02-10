@@ -1,0 +1,17 @@
+"UnlitGeneric"
+{
+	"$basetexture" "signage/indicator/indicator_digital_doorstate"
+	"$surfaceprop" "Glass"
+	"%keywords" "gravity"
+//	"$translucent" 1
+
+  "Proxies" 
+  { 
+   "ToggleTexture"
+   {
+    "toggleTextureVar" "$baseTexture"
+    "toggleTextureFrameNumVar" "$frame"
+    "toggleTextureShouldWrap" "0"
+   } 	
+  } 
+ }

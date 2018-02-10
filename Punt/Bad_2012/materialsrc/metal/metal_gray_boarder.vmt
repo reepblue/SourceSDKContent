@@ -1,0 +1,18 @@
+"LightmappedGeneric"
+{
+
+	"$basetexture" "metal/metal_gray_boarder"
+	"$surfaceprop" "metal"
+	"%keywords" "punt"
+
+	"$bumpmap" "metal/metal_gray_boarder_normal"
+	"$nodiffusebumplighting" 1
+	"$normalmapalphaenvmapmask" 1
+	"$envmap" "env_cubemap"
+	"$envmapcontrast" 1
+	"$envmapsaturation" 1
+	"$envmaptint" "[ 0.2 0.15 0.15 ]"
+
+	"$reflectivity" "[ .15 .10 .07 ]" //this is a artificial radiosity boost
+	
+}

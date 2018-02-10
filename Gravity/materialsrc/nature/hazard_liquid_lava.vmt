@@ -1,0 +1,35 @@
+// envmaptint_fix
+"LightmappedGeneric"
+{
+
+	"$basetexture" "nature/hazard_lava"
+	"$bumpmap" "Nature/slime_normal"
+	"$abovewater" 0
+
+	"$selfillum" 1
+	"$surfaceprop" "slime"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ 1.00 .89 .80 ]"
+	"$envmapcontrast" "1"
+
+	"%keywords" "gravity"
+	"%compileSlime" 1
+
+	"$fogenable" 1
+	"$fogcolor" "{255 185 185}"
+	"$fogstart" 1.00
+	"$fogend" 100.00
+
+	
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$bumpmap"
+			"animatedtextureframenumvar" "$bumpframe"
+			"animatedtextureframerate" 15.00
+		}
+	}
+}
+
+
