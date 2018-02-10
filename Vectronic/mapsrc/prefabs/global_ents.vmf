@@ -1,0 +1,153 @@
+versioninfo
+{
+	"editorversion" "400"
+	"editorbuild" "6440"
+	"mapversion" "5"
+	"formatversion" "100"
+	"prefab" "0"
+}
+visgroups
+{
+}
+viewsettings
+{
+	"bSnapToGrid" "1"
+	"bShowGrid" "1"
+	"bShowLogicalGrid" "0"
+	"nGridSpacing" "8"
+	"bShow3DGrid" "0"
+}
+world
+{
+	"id" "1"
+	"mapversion" "5"
+	"classname" "worldspawn"
+	"detailmaterial" "detail/detailsprites"
+	"detailvbsp" "detail.vbsp"
+	"maxpropscreenwidth" "-1"
+	"skyname" "sky_day01_01"
+}
+entity
+{
+	"id" "2"
+	"classname" "water_lod_control"
+	"cheapwaterenddistance" "2000"
+	"cheapwaterstartdistance" "1000"
+	"origin" "0 16 -8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "4"
+	"classname" "env_fog_controller"
+	"angles" "0 0 0"
+	"farz" "-1"
+	"fogcolor" "200 200 200"
+	"fogcolor2" "250 250 250"
+	"fogdir" "1 0 0"
+	"fogenable" "1"
+	"fogend" "2350.0"
+	"foglerptime" "2"
+	"fogmaxdensity" "1"
+	"fogstart" "128"
+	"HDRColorScale" "1"
+	"spawnflags" "1"
+	"targetname" "fog_controller"
+	"use_angles" "1"
+	"origin" "0 -16 -8"
+	editor
+	{
+		"color" "255 255 255"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"comments" "5000.0 HDR 1.0 200 200 200"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "6"
+	"classname" "shadow_control"
+	"angles" "90 0 0"
+	"color" "98 102 106"
+	"distance" "100"
+	"origin" "0 16 8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "8"
+	"classname" "env_tonemap_controller"
+	"targetname" "tonemap_lvl#"
+	"origin" "0 0 8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "10"
+	"classname" "logic_auto"
+	"spawnflags" "1"
+	connections
+	{
+		"OnMapSpawn" "tonemap_lvl#,SetBloomScale,0.4,0,-1"
+		"OnMapSpawn" "tonemap_lvl#,SetAutoExposureMin,1.30,0,-1"
+		"OnMapSpawn" "tonemap_lvl#,SetAutoExposureMax,1.50,0,-1"
+	}
+	"origin" "0 -16 8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 12000]"
+	}
+}
+entity
+{
+	"id" "12"
+	"classname" "color_correction"
+	"fadeInDuration" "2.0"
+	"fadeOutDuration" "2.0"
+	"filename" "scripts/colorcorrection/cc_vectronic_puzzle.raw"
+	"maxfalloff" "-1"
+	"maxweight" "1.0"
+	"minfalloff" "-1"
+	"StartDisabled" "0"
+	"targetname" "color_correction"
+	"origin" "0 0 -8"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+cameras
+{
+	"activecamera" "-1"
+}
+cordon
+{
+	"mins" "(-1024 -1024 -1024)"
+	"maxs" "(1024 1024 1024)"
+	"active" "0"
+}
